@@ -1,0 +1,21 @@
+html, body {
+    margin: auto;
+    width: 1024px;
+}
+
+h2 {
+    color: black;
+}
+
+
+
+::part(tab){
+    color: aqua;
+}
+::part(tab2){
+    color: rgb(15, 61, 61);
+}
+
+span {
+    color: red;
+}
