@@ -1,4 +1,7 @@
+import './nav-bar/nav-bar.js'
+
 const template = document.createElement('template')
+const navBar = document.createElement('nav-bar')
 
 template.innerHTML = `
 <style>
@@ -17,6 +20,7 @@ template.innerHTML = `
 
     #heading {
         grid-area: top;
+        text-align: center;
     }
     #logo {
         grid-area: logo;
@@ -36,7 +40,6 @@ template.innerHTML = `
         <h4>LOGO</h4>
     </div>
     <div id="navBar">
-        <h3>NAV BAR</h3>
     </div>
 </div>`
 
@@ -47,5 +50,9 @@ class extends HTMLElement {
 
         this.attachShadow({ mode: 'open' })
         .appendChild(template.content.cloneNode(true))
+    }
+
+    connectedCallback () {
+        this.shadowRoot.querySelector('#navBar').append(navBar.cloneNode(true))
     }
 })
