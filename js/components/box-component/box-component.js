@@ -6,6 +6,7 @@ template.innerHTML = `
         width: 100px;
         background-color: orange;
         margin: 10px;
+        font-family: arial;
     }
 </style>
 <div>
@@ -21,7 +22,7 @@ class extends HTMLElement {
         .append(template.content.cloneNode(true))
     }
 
-    connectedCallback () {
+/*     connectedCallback () {
         this.shadowRoot.setAttribute('part', 'tab2')
-    }
+    } */
 })
