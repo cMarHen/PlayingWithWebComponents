@@ -12,9 +12,13 @@ template.innerHTML = `
         background-color:red;
         justify-content: center; 
     }
+    #mainAreaHeading {
+        display: block;
+        text-align: center;
+    }
     #firstDiv {
         background-color: green;
-        width: 100%;
+        width: 95%;
     }
     p {
        background-color: black;
@@ -27,9 +31,12 @@ template.innerHTML = `
     }
     
 </style>
-<div part="tab">
-    <h2>This is a headline</h2>
-    <p> This is my first component<span> With a span </span> to illustrate styling inheritance.</p>
+<div id="mainContainer" part="tab">
+    <div id="mainAreaHeading">
+        <h2>This is a headline</h2>
+        <p> This is my first component<span> With a span </span> to illustrate styling inheritance.</p>
+    </div>
+
     <div id="firstDiv"></div>
     <div id="secondDiv"></div>
 </div>
